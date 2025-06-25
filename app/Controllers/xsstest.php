@@ -6,7 +6,8 @@ class XssTest extends BaseController
 {
     public function index()
     {
-        $q = $this->request->getGet('q');
-        return view('xsstest', ['q' => $q]);
+        $input = $this->request->getGet('input'); // ambil dari query string
+        echo "Output: " . $input;
     }
 }
+

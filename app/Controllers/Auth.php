@@ -84,6 +84,6 @@ class Auth extends Controller
         $db = Database::connect();
         $db->query("DELETE FROM user WHERE user_id = $id");
 
-        return redirect()->to('userList')->with('success', 'User dihapus (rawan IDOR)');
+        return redirect()->to('userList')->with('success', 'User dihapus');
     }
 }
