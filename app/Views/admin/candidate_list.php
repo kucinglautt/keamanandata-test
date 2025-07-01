@@ -32,6 +32,7 @@
                     <?php if (!empty($candidate['photo'])): ?>
                         <img src="<?= base_url('uploads/' . $candidate['photo']) ?>" width="100" alt="Candidate Photo">
                     <?php else: ?>
+<<<<<<< HEAD
                         <img src="<?= base_url('uploads/default.png') ?>" width="100" alt="Default Photo">
                     <?php endif; ?>
                 </td>
@@ -42,6 +43,17 @@
                 <td>
                     <a href="<?= base_url('candidates/edit/' . $candidate['kadidat_id']) ?>">Edit</a> |
                     <form action="<?= base_url('candidates/delete/' . $candidate['kadidat_id']) ?>" method="post" style="display:inline;">
+=======
+                        <img src="<?= base_url('uploads/default.png') ?>" width="100" alt="Default Photo"> <!-- Default image if no photo -->
+                    <?php endif; ?>
+                </td>
+                <td><?= esc($candidate['nama']) ?></td>
+                <td><?= esc($candidate['bio']) ?></td>
+                <td><?= esc($candidate['vote']) ?></td>
+                <td>
+                <a href="<?= base_url('candidates/edit/' . $candidate['kadidat_id']) ?>">Edit</a>|
+                    <form action="<?= base_url('candidates/delete/' . $candidate['kadidat_id'] ) ?>" method="post" style="display:inline;">
+>>>>>>> 367c5753b40114985b3367d4dca64c3244860fa3
                         <?= csrf_field() ?>
                         <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
                     </form>
@@ -55,6 +67,7 @@
     <?php endif; ?>
     </tbody>
 </table>
+<<<<<<< HEAD
 
 <div class="footer-link">
     <a href="<?= base_url('admin/index'); ?>">← Kembali ke Admin</a>
@@ -62,3 +75,11 @@
 
 </body>
 </html>
+=======
+<div class="footer-link">
+            <a href="<?= base_url('admin/index'); ?>">← Kembali ke Admin</a>
+        </div>
+
+</body>
+</html>
+>>>>>>> 367c5753b40114985b3367d4dca64c3244860fa3

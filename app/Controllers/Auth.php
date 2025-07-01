@@ -75,7 +75,11 @@ class Auth extends Controller
         $db->query("INSERT INTO user (username, password, email, role) 
                     VALUES ('$username', '$password', '$email', '$role')");
 
+<<<<<<< HEAD
         return redirect()->to('login')->with('success', 'Pendaftaran berhasil');
+=======
+        return redirect()->to('login')->with('success', 'Pendaftaran berhasil (rawan SQLi & XSS)');
+>>>>>>> 367c5753b40114985b3367d4dca64c3244860fa3
     }
 
     // Endpoint delete tanpa auth

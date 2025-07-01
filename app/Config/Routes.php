@@ -46,3 +46,11 @@ $routes->post('users/delete/(:num)', 'Auth::delete/$1'); // Delete a user
  $routes->get('Login/login', 'Home::index');
 // $routes->get('candidates/create', 'Candidates::create');
 //$routes->post('candidates/store', 'Candidates::store');
+<<<<<<< HEAD
+=======
+
+$routes->get('xss-test', 'xsstest::index');
+$routes->get('/csrf-test', 'CsrfTest::index');
+$routes->post('/csrf-submit', 'CsrfTest::submit');
+
+>>>>>>> 367c5753b40114985b3367d4dca64c3244860fa3
